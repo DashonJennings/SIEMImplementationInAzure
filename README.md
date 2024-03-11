@@ -34,7 +34,6 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 - <b>Windows 11</b> (21H2)
 
 
-<p align="center">
 <h2>Overview</h2>
 
  ![SIEM Lab](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/086407fa-6c4e-42a2-823b-8a7d2202cf01)
