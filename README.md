@@ -51,6 +51,9 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 <h2>Basics</h2>
 
 - Go to portal.azure.com
+- Search for "virtual machines"
+- Create > Azure virtual machine
+  
 
 
 
