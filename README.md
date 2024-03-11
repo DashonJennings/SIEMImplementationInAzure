@@ -17,7 +17,7 @@ Welcome to my GitHub repository! Here, I document my journey of setting up a Sec
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10</b> (21H2)
+- <b>Windows 11</b> (21H2)
 
 <h2>Program walk-through:</h2>
 
