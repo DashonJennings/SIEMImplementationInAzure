@@ -38,12 +38,12 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 
  ![SIEM Lab](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/086407fa-6c4e-42a2-823b-8a7d2202cf01)
 
-<h2>Step 1:Create a Microsoft Azure Subscription</h2>
+<h2>Step 1: Create a Microsoft Azure Subscription</h2>
 
 ![subscription](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/d95487ae-30fd-47d2-bcbb-a04635d4e543)
 
 
-<h2>Step 2:Create a Honeypot Virtual Machine</h2>
+<h2>Step 2: Create a Honeypot Virtual Machine</h2>
 
 ![create_azure_vm](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/f46f04f3-3921-4fb6-a6ba-6a2541cf0190)
 
