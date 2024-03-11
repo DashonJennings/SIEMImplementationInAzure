@@ -85,6 +85,84 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 - Select Next : Disks >
 ![vm1](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/2a068667-8887-44e3-bcea-1206bda4cb56)
 
+<h3>Disks</h3>
+
+- Leave all defaults
+- Select Next : Networking >
+
+
+<h3>Networking</h3>
+
+<h4>Network interface</h4>
+
+- NIC network security group: Advanced > Create new
+- Remove Inbound rules (1000: default-allow-rdp) by clicking three dots
+- Destination port ranges: * (wildcard for anything)
+- Protocol: Any
+- Action: Allow
+- Priority: 100 (low)
+- Name: Anything (ALLOW_ALL_INBOUND)
+- Select Review + create
+
+![network_sec_grp](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/9fadd1e9-7c39-4f77-aa80-ff2621c3286f)
+
+<h1>Step 3: Create a Log Analytics Workspace</h1>
+
+- Search for "Log analytics workspaces"
+- Select Create Log Analytics workspace
+- Put it in the same resource group as VM (honeypotlab)
+- Give it a desired name (honeypot-log)
+- Add to same region (West US 2)
+- Select Review + create
+
+![log_an_wrk](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/513ffa30-9467-46d8-b632-a5de3a121859)
+
+
+
+<h1>Step 4: Configure Microsoft Defender for Cloud</h1>
+
+- Search for "Microsoft Defender for Cloud"
+- Scroll down to "Environment settings" > subscription name > log analytics workspace name (log-honeypot)
+
+![mcrsft_dfndr](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/ca7fbd05-8f5d-4d9d-8550-b3f39a86bc89)
+
+
+<h3>Settings | Defender plans</h3>
+
+- Cloud Security Posture Management: ON
+- Servers: ON
+- SQL servers on machines: OFF
+- Hit Save
+
+![defender_plans](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/b0b320ed-aa3b-4bbd-8b44-ba2602beaa26)
+
+<h3>Settings | Data collection</h3>
+
+- Select "All Events"
+- Hit Save
+
+
+<h1>Step 5: Connect Log Analytics Workspace to Virtual Machine</h1>
+
+- Search for "Log Analytics workspaces"
+- Select workspace name (log-honeypot) > "Virtual machines" > virtual machine name (honeypot-vm)
+- Click Connect
+
+![log_an_vm_connect](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/71b8ba57-6652-4a83-a5ee-f0251fed339f)
+
+
+<h1>Step 4: Step 6: Configure Microsoft Sentinel</h1>
+
+- Search for "Microsoft Sentinel"
+- Click Create Microsoft Sentinel
+- Select Log Analytics workspace name (honeypot-log)
+- Click Add
+
+![sentinel_log](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/f50bd083-a480-440f-89c2-a50c2e01cbb1)
+
+
+
+
 
 
 
