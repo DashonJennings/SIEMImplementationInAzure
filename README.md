@@ -70,6 +70,21 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 - VM Architecture: x64
 - Size: Default is okay Standard D2s v3 (2 vcpus, 8 GiB memory)
 
+<h3>Administrator account</h3>
+
+- Create a username and password for virtual machine
+
+<h3>Inbound port rules</h3>
+
+- Public inbound ports: Allow RDP (3389)
+
+
+<h3>Licensing</h3>
+
+- Confirm licensing
+- Select Next : Disks >
+![vm1](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/2a068667-8887-44e3-bcea-1206bda4cb56)
+
 
 
 
