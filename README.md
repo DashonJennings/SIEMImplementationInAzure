@@ -36,8 +36,7 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+![SIEM Lab](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/cafda06f-cb3b-4b64-a1cd-bdd408b17f6a)
 
 <p align="center">
 Launch the utility: <br/>
