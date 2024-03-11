@@ -12,6 +12,11 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 
 <br />
 
+<h2>Learning Objectives</h2>
+
+- <b>Configuration & Deployment of Azure resources such as virtual machines, Log Analytics Workspaces, and Azure Sentinel</b>
+
+- <b>Hands-on experience and working knowledge of a SIEM Log Management Tool (Microsoft's Azure Sentinel)</b>
 
 <h2>Languages and Utilities Used</h2>
 
