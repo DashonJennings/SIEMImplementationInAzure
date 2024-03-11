@@ -2,6 +2,9 @@
 
  ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
 
+![col-pr-msft-azure-sentinel](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/9ab55ce6-0954-4892-a1c6-c3b0bfbb45e8)
+
+
 <h2>Description</h2>
 Welcome to my GitHub repository! Here, I document my journey of setting up a Security Information and Event Management (SIEM) solution in my Azure home lab environment. From planning and configuration to troubleshooting and optimization, I share insights, code snippets, and learnings from my hands-on experience with SIEM tools in a cloud environment.
 
