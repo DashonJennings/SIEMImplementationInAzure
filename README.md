@@ -48,6 +48,15 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 ![create_azure_vm](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/f46f04f3-3921-4fb6-a6ba-6a2541cf0190)
 
 
+<h2>Step 2: Basic</h2>
+
+
+
+
+
+
+
+
 <br />
 <br />
 
