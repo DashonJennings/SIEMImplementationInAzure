@@ -38,10 +38,9 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 
  ![SIEM Lab](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/086407fa-6c4e-42a2-823b-8a7d2202cf01)
 
+<h2>Step 1:Create a Microsoft Azure Subscription</h2>
 
-<p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+![subscription](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/d95487ae-30fd-47d2-bcbb-a04635d4e543)
 
 
 <br />
