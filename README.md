@@ -55,7 +55,7 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 - Create > Azure virtual machine
 
 
-<h1>Project Details</h1>
+<h3>Project Details</h3>
 
 
 
