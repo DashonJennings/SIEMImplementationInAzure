@@ -11,7 +11,9 @@ Welcome to my GitHub repository! Here, I document my journey of setting up a Sec
 <h2>Languages and Utilities Used</h2>
 
 - <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>Kusto Query Language (KQL)</b>
+- <b>Azure Security Center</b>
+- <b>Azure Sentinel</b>
 
 <h2>Environments Used </h2>
 
