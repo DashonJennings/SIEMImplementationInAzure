@@ -33,8 +33,6 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 
 - <b>Windows 11</b> (21H2)
 
-<h2>Program walk-through:</h2>
-
 
 <p align="center">
 <h2>Overview</h2>
