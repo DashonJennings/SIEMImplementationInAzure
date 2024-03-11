@@ -19,7 +19,7 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 - <b>Kusto Query Language (KQL)</b>
 - <b>Azure Security Center</b>
 - <b>Azure Sentinel</b>
-- <b>3rd Party API: ipgeolocation.io</b>
+- <b>3rd Party API: http://ipgeolocation.io</b>
 - <b>Remote Desktop Protocol (RDP)</b>
 
 <h2>Environments Used </h2>
