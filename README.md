@@ -57,8 +57,18 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 
 <h3>Project Details</h3>
 
+- Create new resource group and name it (honeypotlab)
 
 
+<h3>Instance details</h3>
+
+- Name your VM (honeypot-vm)
+- Select a recommended region ((US) West US 2)
+- Availability options: No infrastructure redundancy required
+- Security type: Standard
+- Image: Windows 11 Pro, version 22H2 
+- VM Architecture: x64
+- Size: Default is okay Standard D2s v3 (2 vcpus, 8 GiB memory)
 
 
 
