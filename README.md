@@ -239,6 +239,77 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 ![failed_rdp_with_geo](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/50cce716-84d8-4f32-b4ef-49b442ec6432)
 
 
+<h1>Step 11: Extract Fields from Custom Log</h1>
+
+- Right click any of the log results
+- Select Extract fields from 'FAILED_RDP_WITH_GEO_CL'
+- Highlight ONLY the value after the ":"
+- Name the Field Title the name of the field of the value
+- Under Field Type select the appropriate data type
+- Hit Extract
+- If the search results data looks good click the Save extraction button
+- Do this for ALL available fields in RawData
+
+![data_extraction](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/9a4f6b45-77da-4661-8dba-4a6292102525)
+
+
+<h1>Step 12: Map Data in Microsoft Sentinel</h1>
+
+- Go to Microsoft Sentinel to see the Overview page and available events
+- Click on Workbooks and Add workbook then click Edit
+- Remove default widgets (Three dots > Remove)
+- Click Add > Add query
+- Copy/Paste the following query into the query window and Run Query
+
+FAILED_RDP_WITH_GEO_CL | summarize event_count=count() by sourcehost_CF, latitude_CF, longitude_CF, country_CF, label_CF, destinationhost_CF
+| where destinationhost_CF != "samplehost"
+| where sourcehost_CF != ""
+
+- Once results come up click the Visualization dropdown menu and select Map
+- Select Map Settings for additional configuration
+
+<h3>Layout Settings</h3>
+
+- Location info using > Latitude/Longitude
+- Latitude > latitude_CF
+- Longitude > longitude_CF
+- Size by > event_count
+
+
+<h3>Color Settings</h3>
+
+- Coloring Type: Heatmap
+- Color by > event_count
+- Aggregation for color > Sum of values
+- Color palette > Green to Red
+
+<h3>Metric Settings</h3>
+
+- Metric Label > label_CF
+- Metric Value > event_count
+- Select Apply button and Save and Close
+- Save as "Failed RDP World Map" in the same region and under the resource group (honeypotlab)
+- Continue to refresh map to display additional incoming failed RDP attacks
+
+
+![failed_rdp_map](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/49192215-bf12-4af9-a520-0e65e0dd8df4)
+
+![event_viewer](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/e27cb4f1-0e75-4254-8ad1-00aae70ab8ee)
+
+![rdp_script](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/1f5c5bad-744e-4888-8ff6-c125dcf5f4ac)
+
+
+
+<h1>Step 13: Deprovision Resources</h1>
+
+- Search for "Resource groups" > name of resource group (honeypotlab) > Delete resource group
+- Type the name of the resource group ("honeypotlab") to confirm deletion
+- Check the Apply force delete for selected Virtual machines and Virtual machine scale sets box
+- Select Delete
+
+![delete_resource_group](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/5daf76fa-0984-41f6-b092-2ded7bddcd42)
+
+
 
 
 
