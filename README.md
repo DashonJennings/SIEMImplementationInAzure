@@ -151,7 +151,7 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 ![log_an_vm_connect](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/71b8ba57-6652-4a83-a5ee-f0251fed339f)
 
 
-<h1>Step 4: Step 6: Configure Microsoft Sentinel</h1>
+<h1>Step 6: Configure Microsoft Sentinel</h1>
 
 - Search for "Microsoft Sentinel"
 - Click Create Microsoft Sentinel
@@ -160,6 +160,83 @@ SIEM, or Security Information and Event Management, aids organizations in spotti
 
 ![sentinel_log](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/f50bd083-a480-440f-89c2-a50c2e01cbb1)
 
+
+
+<h1>Step 7: Disable the Firewall in Virtual Machine</h1>
+
+- Go to Virtual Machines and find the honeypot VM (honeypot-vm)
+- By clicking on the VM copy the IP address
+- Log into the VM via Remote Desktop Protocol (RDP) with credentials from step 2
+- Accept Certificate warning
+- Select NO for all Choose privacy settings for your device
+- Click Start and search for "wf.msc" (Windows Defender Firewall)
+- Click "Windows Defender Firewall Properties"
+- Turn Firewall State OFF for Domain Profile Private Profile and Public Profile
+- Hit Apply and Ok
+- Ping VM via Host's command line to make sure it is reachable ping -t <VM IP>
+
+![defender_off](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/218389ab-8d7b-483c-8c10-3d048ca89f93)
+
+
+<h1>Step 8: Scripting the Security Log Exporter</h1>
+
+- In VM open Powershell ISE
+- Set up Edge without signing in
+- Copy Powershell script into VM's Powershell (Written by Josh Madakor)
+- Select New Script in Powershell ISE and paste script
+- Save to Desktop and give it a name (Log_Exporter)
+
+![powershell_script](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/bcf9b1c4-4a16-4996-9f04-ec1af1515ad8)
+
+
+- Make an account with Free IP Geolocation API and Accurate IP Lookup Database
+- Copy API key once logged in and paste into script line 2: $API_KEY = "<API key>"
+- Hit Save
+- Run the PowerShell ISE script (Green play button) in the virtual machine to continuously produce log data
+
+![ipgeolocation](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/12750f92-2323-4862-a7e2-f3100cb5e302)
+
+
+
+<h1>Step 9: Create Custom Log in Log Analytics Workspace</h1>
+
+- Create a custom log to import the additional data from the IP Geolocation service into Azure Sentinel
+- Search "Run" in VM and type "C:\ProgramData"
+- Open file named "failed_rdp" hit CTRL + A to select all and CTRL + C to copy selection
+- Open notepad on Host PC and paste contents
+- Save to desktop as "failed_rdp.log"
+- In Azure go to Log Analytics Workspaces > Log Analytics workspace name (honeypot-log) > Custom logs > Add custom log
+
+<h3>Sample</h3>
+
+- Select Sample log saved to Desktop (failed_rdp.log) and hit Next
+
+
+<h3>Record delimiter</h3>
+
+- Review sample logs in Record delimiter and hit Next
+
+
+<h3>Collection paths</h3>
+
+- Type > Windows
+- Path > "C:\ProgramData\failed_rdp.log"
+
+
+<h3>Details</h3>
+
+- Give the custom log a name and provide description (FAILED_RDP_WITH_GEO) and hit Next
+- Hit Create
+
+![custom_log](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/62b2ffa9-aa33-4284-9a3e-0bb023be6f3a)
+
+
+<h1>Step 10: Query the Custom Log</h1>
+
+- In Log Analytics Workspaces go to the created workspace (honeypot-log) > Logs
+- Run a query to see the available data (FAILED_RDP_WITH_GEO_CL)
+
+![failed_rdp_with_geo](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/50cce716-84d8-4f32-b4ef-49b442ec6432)
 
 
 
