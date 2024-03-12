@@ -1,7 +1,5 @@
 
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
-
 ![col-pr-msft-azure-sentinel](https://github.com/DashonJennings/SIEMImplementationInAzure/assets/160358839/9ab55ce6-0954-4892-a1c6-c3b0bfbb45e8)
 
 <h1>SIEM Implementation in Azure</h1>
